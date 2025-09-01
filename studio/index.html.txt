@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Camila Costa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Studio Camila Costa</div>
+    <ul>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Studio Camila Costa</h1>
+    <p>"Onde a beleza encontra o cuidado que toca a alma."</p>
+  </header>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <h2 class="section-title">Nossos Serviços</h2>
+    <div class="services">
+      <div class="service-card fade-in">
+        <h3>Limpeza de Pele</h3>
+        <p>Tratamento completo para deixar sua pele saudável e radiante.</p>
+      </div>
+      <div class="service-card fade-in">
+        <h3>Peeling</h3>
+        <p>Renove a pele, promovendo suavidade e luminosidade.</p>
+      </div>
+      <div class="service-card fade-in">
+        <h3>Botox</h3>
+        <p>Suavização de linhas de expressão e manutenção da juventude.</p>
+      </div>
+      <div class="service-card fade-in">
+        <h3>Preenchimento Facial</h3>
+        <p>Realce natural dos contornos faciais, com resultados elegantes.</p>
+      </div>
+      <div class="service-card fade-in">
+        <h3>Fios de Sustentação</h3>
+        <p>Tratamento avançado para firmeza e rejuvenescimento facial.</p>
+      </div>
+      <div class="service-card fade-in">
+        <h3>Tratamentos Nutritivos</h3>
+        <p>Cuidados específicos para revitalizar e nutrir a pele.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="about">
+    <h2 class="section-title">Sobre Nós</h2>
+    <p class="fade-in">Texto sobre a clínica será adicionado aqui.</p>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <h2 class="section-title">Galeria</h2>
+    <div class="gallery">
+      <img src="images/foto1.jpg" alt="Foto 1" class="fade-in">
+      <img src="images/foto2.jpg" alt="Foto 2" class="fade-in">
+      <img src="images/foto3.jpg" alt="Foto 3" class="fade-in">
+      <img src="images/foto4.jpg" alt="Foto 4" class="fade-in">
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h2 class="section-title">Contato</h2>
+    <div class="contact-info fade-in">
+      <p>WhatsApp: <a href="https://wa.me/5511916788620" target="_blank">11 91678-8620</a></p>
+      <p>Endereço: Galeria Francisco Spinha</p>
+    </div>
+    <form class="contact-form fade-in" action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Seu email" required>
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- BOTÃO WHATSAPP -->
+  <a href="https://wa.me/5511916788620" target="_blank" class="whatsapp">💬</a>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Studio Camila Costa - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
